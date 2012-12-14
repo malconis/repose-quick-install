@@ -40,19 +40,6 @@ install_repose()
     wget -nv $LATEST_BUILD_JAR -O $REPOSE/repose-valve.jar
     wget -nv $LATEST_BUILD_FB -O $ARTIFACT_DIR/filter-bundle.ear
 
-    buildConfigs()
-    {
-        while read line
-        do
-        if [ -n "$line" ]
-        then
-            eval echo "'$line'" >> $2
-        fi
-        done < "$1"
-
-    }
-
-
     echo "Downloading config files"
 
     for f in $DIR/configs/*
@@ -61,10 +48,10 @@ install_repose()
         base=`basename $f`
         echo "building $base"
         touch $CONFIG_DIR/$base
-        #buildConfigs $f $CONFIG_DIR/$base 
         source $f > $CONFIG_DIR/$base
     done
 
+    start_repose
 }
 
 
