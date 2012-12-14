@@ -1,0 +1,9 @@
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<repose-container xmlns='http://docs.rackspacecloud.com/repose/container/v2.0'>
+    <deployment-config http-port=\"8888\" connection-timeout=\"300000\" read-timeout=\"300000\">
+        <deployment-directory auto-clean=\"false\">${DEPLOYMENT_DIR}</deployment-directory>
+        <artifact-directory check-interval=\"60000\">${ARTIFACT_DIR}</artifact-directory>
+        <logging-configuration href=\"log4j.properties\"/>
+    </deployment-config>
+</repose-container>
+"

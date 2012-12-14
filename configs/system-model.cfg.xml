@@ -1,0 +1,22 @@
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<system-model xmlns=\"http://docs.rackspacecloud.com/repose/system-model/v2.0\">
+  <repose-cluster id=\"repose\">
+
+    <nodes>
+      <node id=\"node1\" hostname=\"localhost\" http-port=\"8888\"/>
+    </nodes>
+
+    <filters>
+     <filter name=\"ip-identity\" />
+     <filter name=\"rate-limiting\" />
+     <filter name=\"http-logging\" />
+    </filters>
+
+    <destinations>
+      <endpoint id=\"openrepose\" protocol=\"http\" hostname=\"www.openrepose.org\" root-path=\"/\" port=\"80\" default=\"true\"/>
+    </destinations>
+
+  </repose-cluster>
+
+</system-model>
+"
