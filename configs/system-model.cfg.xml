@@ -7,9 +7,9 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
     </nodes>
 
     <filters>
+     <filter name=\"http-logging\" />
      <filter name=\"ip-identity\" />
      <filter name=\"rate-limiting\" />
-     <filter name=\"http-logging\" />
     </filters>
 
     <destinations>
