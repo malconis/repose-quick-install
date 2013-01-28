@@ -13,8 +13,8 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 start_repose()
 {
-    echo "Starting repose on port 8888..."
-    java -jar $REPOSE/repose-valve.jar START -p 8888 -s 8188 -c $CONFIG_DIR > /dev/null 2>&1 &
+    echo "Starting repose..."
+    java -jar $REPOSE/repose-valve.jar START -s 8188 -c $CONFIG_DIR > /dev/null 2>&1 &
 }
 
 stop_repose()
